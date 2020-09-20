@@ -1,0 +1,5 @@
+@use 'variables';
+
+.btn-custom {
+  background-color: variables.$dark-blue;
+}

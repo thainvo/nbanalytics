@@ -9,9 +9,11 @@ import {
   FaIconLibrary,
 } from '@fortawesome/angular-fontawesome';
 import { fas } from '@fortawesome/free-solid-svg-icons';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { UserInputComponent } from './components/user-input/user-input.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, NavbarComponent, UserInputComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
