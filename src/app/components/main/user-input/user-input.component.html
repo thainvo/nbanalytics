@@ -1,7 +1,27 @@
 <div class="container">
-    <div class="row">
-        <div class="col-12">
-            <input [(ngModel)]="selected" [typeahead]="states" class="form-control" />
+    <form>
+        <div class="row">
+            <div class="col-12">
+                <div class="form-group">
+                    <label for="teamInput">Team</label>
+                    <input id="teamInput" name="team" [(ngModel)]="selected" [typeahead]="states"
+                        class="form-control" />
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="form-group">
+                    <label for="startDateInput">Start date</label>
+                    <input id="startDateInput" type="text" class="form-control" [bsConfig]="bsConfig" #dp="bsDatepicker"
+                        bsDatepicker />
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="form-group">
+                    <label for="startDateInput">End date</label>
+                    <input id="endDateInput" type="text" class="form-control" [bsConfig]="bsConfig" #dp="bsDatepicker"
+                        bsDatepicker />
+                </div>
+            </div>
         </div>
-    </div>
+    </form>
 </div>

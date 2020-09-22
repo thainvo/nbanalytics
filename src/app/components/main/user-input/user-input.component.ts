@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import {
+  BsDatepickerConfig,
+  BsDatepickerViewMode,
+} from 'ngx-bootstrap/datepicker';
 
 @Component({
   selector: 'app-user-input',
@@ -7,6 +11,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserInputComponent implements OnInit {
   selected: string;
+  bsConfig: Partial<BsDatepickerConfig>;
+  minMode: BsDatepickerViewMode = 'year';
+
   states: string[] = [
     'Alabama',
     'Alaska',
@@ -62,5 +69,13 @@ export class UserInputComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.bsConfig = Object.assign(
+      {},
+      {
+        minMode: this.minMode,
+        containerClass: 'theme-dark-blue',
+      }
+    );
+  }
 }

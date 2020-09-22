@@ -15,6 +15,7 @@ import { fas } from '@fortawesome/free-solid-svg-icons';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { UserInputComponent } from './components/main/user-input/user-input.component';
 import { MainComponent } from './components/main/main.component';
+import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { MainComponent } from './components/main/main.component';
   imports: [
     FormsModule,
     TypeaheadModule.forRoot(),
+    BsDatepickerModule.forRoot(),
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
